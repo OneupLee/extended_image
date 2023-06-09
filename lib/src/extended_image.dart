@@ -970,10 +970,11 @@ class _ExtendedImageState extends State<ExtendedImage>
           );
           break;
         case BoxShape.rectangle:
-          if (widget.borderRadius != null) {
+          final BorderRadius? borderRadius = widget.borderRadius;
+          if (borderRadius != null) {
             current = ClipRRect(
               child: current,
-              borderRadius: widget.borderRadius,
+              borderRadius: borderRadius,
               clipBehavior: widget.clipBehavior,
             );
           }
